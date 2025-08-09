@@ -40,10 +40,7 @@
             position: relative;
             width: 400px;
             height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px 0;
+            margin: 20px auto;
         }
 
         .gear {
@@ -56,33 +53,38 @@
         .gear-large {
             width: 200px;
             height: 200px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
             animation: rotate-clockwise 8s linear infinite;
         }
 
         .gear-medium {
             width: 120px;
             height: 120px;
-            top: -20px;
-            right: 40px;
+            left: 80%;
+            top: 20%;
+            transform: translate(-50%, -50%);
             animation: rotate-counter-clockwise 5s linear infinite;
         }
 
         .gear-small {
             width: 80px;
             height: 80px;
-            bottom: 10px;
-            left: 20px;
-            animation: rotate-clockwise 6s linear infinite;
+            left: 20%;
+            top: 80%;
+            transform: translate(-50%, -50%);
+            animation: rotate-counter-clockwise 6s linear infinite;
         }
 
         @keyframes rotate-clockwise {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(360deg); }
         }
 
         @keyframes rotate-counter-clockwise {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(-360deg); }
+            from { transform: translate(-50%, -50%) rotate(0deg); }
+            to { transform: translate(-50%, -50%) rotate(-360deg); }
         }
 
         .content {
@@ -90,6 +92,10 @@
             z-index: 10;
             max-width: 600px;
             padding: 0 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         h1 {
@@ -164,7 +170,6 @@
     </style>
 </head>
 <body>
-
     <!--
     <div class="logo-container">
         <img src="Spoel_Consulting_Logo.png" alt="Spoel Consulting" class="logo" onerror="this.style.display='none'">
