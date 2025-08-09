@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoel Consulting - Mechanical Engineering Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f8f8f8;
+            color: #222;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .logo-container {
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+            filter: grayscale(100%) contrast(1.2);
+        }
+
+        .gears-container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .gear {
+            position: absolute;
+            fill: none;
+            stroke: #222;
+            stroke-width: 2;
+        }
+
+        .gear-large {
+            width: 200px;
+            height: 200px;
+            animation: rotate-clockwise 8s linear infinite;
+        }
+
+        .gear-medium {
+            width: 120px;
+            height: 120px;
+            top: -20px;
+            right: 40px;
+            animation: rotate-counter-clockwise 5s linear infinite;
+        }
+
+        .gear-small {
+            width: 80px;
+            height: 80px;
+            bottom: 10px;
+            left: 20px;
+            animation: rotate-clockwise 6s linear infinite;
+        }
+
+        @keyframes rotate-clockwise {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes rotate-counter-clockwise {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(-360deg); }
+        }
+
+        .content {
+            text-align: center;
+            z-index: 10;
+            max-width: 600px;
+            padding: 0 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .contact {
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        .email {
+            color: #222;
+            text-decoration: none;
+            border-bottom: 2px solid #222;
+            padding-bottom: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .email:hover {
+            background: #222;
+            color: #f8f8f8;
+            padding: 5px 10px;
+            border-bottom: none;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .logo {
+                width: 150px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .gears-container {
+                width: 300px;
+                height: 300px;
+            }
+
+            .gear-large {
+                width: 150px;
+                height: 150px;
+            }
+
+            .gear-medium {
+                width: 90px;
+                height: 90px;
+            }
+
+            .gear-small {
+                width: 60px;
+                height: 60px;
+            }
+        }
+
+        /* Background subtle pattern */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.03;
+            background-image: 
+                linear-gradient(45deg, #222 25%, transparent 25%),
+                linear-gradient(-45deg, #222 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #222 75%),
+                linear-gradient(-45deg, transparent 75%, #222 75%);
+            background-size: 30px 30px;
+            background-position: 0 0, 0 15px, 15px -15px, -15px 0px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="Spoel_Consulting_Logo.png" alt="Spoel Consulting" class="logo" onerror="this.style.display='none'">
+    </div>
+
+    <div class="content">
+        <div class="gears-container">
+            <!-- Large Gear -->
+            <svg class="gear gear-large" viewBox="0 0 200 200">
+                <path d="M100,20 L110,10 L110,30 L100,20 Z
+                         M100,180 L110,190 L110,170 L100,180 Z
+                         M20,100 L10,110 L30,110 L20,100 Z
+                         M180,100 L190,110 L170,110 L180,100 Z
+                         M150,35 L157,28 L147,42 L150,35 Z
+                         M150,165 L157,172 L147,158 L150,165 Z
+                         M50,35 L43,28 L53,42 L50,35 Z
+                         M50,165 L43,172 L53,158 L50,165 Z
+                         M165,50 L172,43 L158,53 L165,50 Z
+                         M35,50 L28,43 L42,53 L35,50 Z
+                         M165,150 L172,157 L158,147 L165,150 Z
+                         M35,150 L28,157 L42,147 L35,150 Z" 
+                      fill="#222"/>
+                <circle cx="100" cy="100" r="60" fill="none" stroke="#222" stroke-width="2"/>
+                <circle cx="100" cy="100" r="15" fill="none" stroke="#222" stroke-width="2"/>
+            </svg>
+            
+            <!-- Medium Gear -->
+            <svg class="gear gear-medium" viewBox="0 0 120 120">
+                <path d="M60,15 L67,8 L67,22 L60,15 Z
+                         M60,105 L67,112 L67,98 L60,105 Z
+                         M15,60 L8,67 L22,67 L15,60 Z
+                         M105,60 L112,67 L98,67 L105,60 Z
+                         M90,25 L95,19 L87,31 L90,25 Z
+                         M90,95 L95,101 L87,89 L90,95 Z
+                         M30,25 L25,19 L33,31 L30,25 Z
+                         M30,95 L25,101 L33,89 L30,95 Z" 
+                      fill="#222"/>
+                <circle cx="60" cy="60" r="35" fill="none" stroke="#222" stroke-width="2"/>
+                <circle cx="60" cy="60" r="10" fill="none" stroke="#222" stroke-width="2"/>
+            </svg>
+            
+            <!-- Small Gear -->
+            <svg class="gear gear-small" viewBox="0 0 80 80">
+                <path d="M40,10 L45,5 L45,15 L40,10 Z
+                         M40,70 L45,75 L45,65 L40,70 Z
+                         M10,40 L5,45 L15,45 L10,40 Z
+                         M70,40 L75,45 L65,45 L70,40 Z
+                         M60,18 L64,14 L58,22 L60,18 Z
+                         M60,62 L64,66 L58,58 L60,62 Z
+                         M20,18 L16,14 L22,22 L20,18 Z
+                         M20,62 L16,66 L22,58 L20,62 Z" 
+                      fill="#222"/>
+                <circle cx="40" cy="40" r="25" fill="none" stroke="#222" stroke-width="2"/>
+                <circle cx="40" cy="40" r="8" fill="none" stroke="#222" stroke-width="2"/>
+            </svg>
+        </div>
+        
+        <h1>IN DEVELOPMENT</h1>
+        
+        <div class="subtitle">
+            Mechanical Engineering Services<br>
+            Coming Soon
+        </div>
+        
+        <div class="contact">
+            Get in touch: <a href="mailto:liam@spoelconsulting.com" class="email">liam@spoelconsulting.com</a>
+        </div>
+    </div>
+</body>
+</html>
