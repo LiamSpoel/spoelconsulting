@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mechanical Engineering Consulting — specialising in rapid prototyping, complex design, and product development.">
+    <title>Spoel Consulting — Mechanical Engineering</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero -->
+    <header class="hero">
+        <div class="overlay">
+            <div class="container hero-content">
+                <h1>Spoel Consulting</h1>
+                <p class="tagline">Turning ambitious ideas into real hardware</p>
+                <a href="#contact" class="cta-button">Get in Touch</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About -->
+    <main class="container">
+        <section class="intro">
+            <h2>About</h2>
+            <p>
+                Spoel Consulting provides mechanical engineering expertise for rapid prototyping, complex design, and product development. 
+                With experience from space technology to custom manufacturing solutions, we help you bring innovative concepts to life with precision and efficiency.
+            </p>
+        </section>
+
+        <!-- Services -->
+        <section class="services">
+            <h2>Services</h2>
+            <ul>
+                <li>Mechanical design and CAD modelling</li>
+                <li>Rapid prototyping & testing</li>
+                <li>Product development & optimisation</li>
+                <li>Specialist joint and mechanism design</li>
+            </ul>
+        </section>
+
+        <!-- Projects / Gallery -->
+        <section class="projects">
+            <h2>Recent Projects</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1581091870622-84d4d7e1d7d5" alt="Prototype Assembly">
+                    <p>Prototype Assembly</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1581092334700-61196cf959f9" alt="Precision Machining">
+                    <p>Precision Machining</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1581090700227-4c4f50f0b37b" alt="Custom Mechanism Design">
+                    <p>Custom Mechanism Design</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:liam@spoelconsulting.com">liam@spoelconsulting.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/liam-spoel" target="_blank">linkedin.com/in/liam-spoel</a></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Spoel Consulting. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
